@@ -5,14 +5,12 @@ import StreamDelete from "./Streams/StreamDelete";
 import StreamEdit from "./Streams/StreamEdit";
 import StreamList from "./Streams/StreamList";
 import StreamShow from "./Streams/StreamShow";
-import Header from "./Header";
 
-const App = () => {
+const Routes = () => {
   return (
-    <div className="ui container">
+    <div>
       <BrowserRouter>
         <div>
-          <Header />
           <Route path="/" exact component={StreamList} />
           <Route path="/streams/new" exact component={StreamCreate} />
           <Route path="/streams/edit" exact component={StreamEdit} />
@@ -25,4 +23,4 @@ const App = () => {
   // BrowserRouter can only have one output (<div></div>)
 };
 
-export default App;
+export default Routes;
